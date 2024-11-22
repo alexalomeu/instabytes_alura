@@ -14,10 +14,7 @@ export async function getTodosPosts() {
 }
 
 export async function criarPost(novoPost) {
-    const db = conexao.db("imersaoinstabytes");
-    const colecao = db.collection("posts");
-    console.log("Objeto enviado para insertOne:", postData);
-
-    const resultado = await colecao.insertOne(novoPost);
-    console.log("Resultado da inserção:", resultado);
-    return resultado}
+  const db = conexao.db("imersaoinstabytes");
+  const colecao = db.collection("posts");
+  return colecao.insertOne(novoPost)
+}
